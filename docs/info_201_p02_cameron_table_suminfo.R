@@ -18,7 +18,7 @@ summary_info$num_vars <- ncol(drug_data)
 summary_info$states <- unique(drug_data$State.Name)
 summary_info$months <- unique(drug_data$Month)
 summary_info$drug_type <- unique(drug_data$Indicator)
-summary_info$drug_type <- summary_info$drug_type[- c(2, 4, 7)]    
+summary_info$drug_type <- summary_info$drug_type[-c(2, 10, 11)]
 summary_info$years <- unique(drug_data$Year)
 overdose_death_national_dt <- drug_data %>%
   group_by(State.Name) %>%
@@ -26,7 +26,8 @@ overdose_death_national_dt <- drug_data %>%
   filter(State.Name == 'United States') %>%
   filter(Month == 'January')
 sep_2021_overdose_deaths <- drug_data[47042, 6]
-summary_info$overdose_total <- sum(overdose_death_national_dt$Data.Value, na.rm = TRUE) + sep_2021_overdose_deaths
+subtract_from_sep <- drug_data[]
+summary_info$overdose_total <- sum(overdose_death_national_dt$Data.Value, na.rm = TRUE)+sep_2021_overdose_deaths
 
 df_for_table <- drug_data %>%
   filter(Indicator == 'Number of Drug Overdose Deaths') %>%
