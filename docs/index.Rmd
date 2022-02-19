@@ -1,56 +1,70 @@
 ---
-title: "Your Project Title"
-author: "project team members"
-date: "1/22/2022"
+title: PO2:Exploratory Analysis
+author: Joseph Koroki
+        Cameron Rezek
+        Soneta U.
+date: "2/18/2022"
 output: html_document
 ---
+
+| Element | Brief Description |
+| : | : |
+|Code name| US-OD
+|Project title| Examining Drug Overdoses in the U.S.
+|Authors| Joseph Koroki: korokj@uw.edu Cameron Rezek: jcrezek@uw.edu Soneta Un: sone5@uw.edu
+|Affiliation| INFO-201: Technical Foundations of Informatics - The Information School - University of Washington
+|Date| Winter 2022 02/18/2022
+|Abstract| Our main question is what solutions can be implemented to combat the rising drug overdose deaths in the U.S.? This question is important because substance abuse and drug overdosing have posed prevalent societal and economic issues since the 1970s. To address this concern, we will examine variables and data associated with drug overdose deaths.
+|Keywords| "drug overdose deaths in the U.S. data"; "substance abuse"; "effects of drugs on the human physiology"; "symptoms and side effects"; "drug laws and legislation"
+|1.0 Introduction| Overdose deaths in the United States are at an all-time high, continuing an unprecedented trend that has only increased throughout the past few decades. There is a multitude of variables that have incited this phenomenon, but much of the blame is directed towards the growing popularity of opiates within the country. Our project aims to examine data collected on drug overdoses, including the types of drugs associated with the deaths. Specifically, we are searching for trends within states and years, and finding a correlation between those two factors and drug overdose deaths. We are also interested in discovering which particular drugs are impacting which cities the most. We hope that our project helps educate Americans on the prevalence of drug overdose, and informs them about which areas of the country are at the highest risk. Ultimately, our team chose this topic to spread awareness of the dangers of drug overdose and inform a better future for the citizens of the United States of America.
+|2.0 Design Situation| **Framing the Topic of Concern**: The topic of concern we are addressing in our data science project is deaths within the U.S. caused by drug overdose. Key elements within this topic are what drugs are being used within the substance abuse epidemic, what U.S. locations have the highest number of drug overdose cases, how the usage of drugs affects the dichotomy of society and its citizens, and how this issue is being addressed. Key scientific issues are the impact drugs have on human physiology and rapidly decreasing life spans. Another important facet to understand is how the power and influence of drugs affects certain demographics compared to others. Economically, it is important to examine the affects of the high-in-demand drug business on markets. A governmental issue that also need to be addressed would be how legislation tackles the legalization of drugs in U.S. states, and how it takes action against the overdose crisis.  <br /> <br /> **Human Values**: Human values that are ingrained in the motivations of our project would be empathy, equality, altruism and the appreciation of human life. Oftentimes the issue of drug usage is ignored, and many individuals suffering from substance abuse are also overlooked. Many believe that those who put themselves in a critical state of need as a result of drug abuse are at fault for putting themselves in that position, and earn little sympathy. Although, taking ownership of one's actions is important, it is also imperative to help those who need it and to empathize with their struggles and conflicts.  <br /><br /> **Stakeholders**: Direct stakeholders of substance abuse within the U.S. would be individuals who partake in the usage of drugs or those you have overdosed. Indirect stakeholders would be policy makers, designers and engineers that develop products and solutions associated with drug abuse. Researchers, clinicians and family members are also indirect stakeholders.  <br /><br /> **Benefits and Harms**: The potential harm that comes from interventions to drug overdose taken with data and technology, is that some datasets may be inaccurate or do not have enough data to be considered reliable/conclusive. Potential benefits, however, would be that a well-developed solution could help an entire population of people suffering from drug abuse. Stakeholders that are likely to benefit from these solutions would be family members, patients, victims, designers, engineers, clinicians, and researchers. These stakeholders are also likely to be harmed by a misinformed solution as well. An unanticipated consequence might be public outrage due to a restriction on drugs if legislation were to pass that as a solution.  <br />  https://www.pcori.org/research-results/2014/stakeholders-substance-use-research-and-treatment-information-exchange-ssurtie   <br />  https://www.cdc.gov/opioids/data/analysis-resources.html  <br />   https://journals.lww.com/co-psychiatry/Fulltext/2021/07000/The_rise_of_illicit_fentanyls,_stimulants__the.4.aspx
+|3.0 Research Questions| **1. What specific drugs are the most responsible for death caused by drug overdose?  <br /> 2. Which demographic is the most affected by drug overdose/abuse?  <br /> 3. Which locations within the U.S. have the highest number of drug overdoses?  <br /> 4. What solutions have been invented to prevent the increase of drug overdose?  <br /> 5. What drugs run a higher risk of overdose and death? Why?** <br /> The five questions mentioned above prod for information that would be essential in understanding drug overdose and how to combat it. Learning what drugs cause the most deaths or are more likely to incite overdose, either due to addictive properties, accessibility, or other factors would be critical in the development of solutions to address this situation. Also, recognizing what demographics and in what location these drugs are affecting the most will help us understand why drug overdose occurs, how it can be prevented, and who needs it the most.
+|4.0 The Dataset| https://www.cdc.gov/nchs/nvss/vsrr/drug-overdose-data.htm#data-tables Nrow: 44695 Ncol: 12 Overdose deaths throughout the US are accounted for and broken down by state and month. The mortality data is pulled from the National Vital Statistics System. The deaths are counted throughout all 50 states, including the District of Columbia. The observation in this instance would be a specific state (broken down by month).  <br /> <br /> The data goes beyond just the number of overdose deaths: it also includes what drug caused the overdose if that data is available. The number of fatalities, type of drug, the year, and the month would all be considered variables. The CDC conducts case surveillance through the National Notifiable Diseases Surveillance System, which works with over 3,000 health departments. This data set was recorded from the beginning of 2015 thru 2021. The CDC’s goal from collecting this data is to protect and preserve their local communities. The CDC acquires its funding by annual appropriations determined by the U.S. Congress and charitable donations. Data collection is paramount to protecting the public’s safety and health. Their validation efforts are internal and subject to auditing and validation by external agencies, which upholds the quality of the data. Data is held secure with Federal Information Processing Standard (FIPS) encryption. CDC’s efforts to increase credibility and trustworthiness with the public are well documented, and there is a section on their site that showcases all their peer reviews. Our particular dataset includes a downloadable CSV file which we will use for our project. <br /> <br /> Our team feels that the amount of data in the table is enough to make a significant analysis of drug use in the United States. Breaking down which drugs affect which communities the most is vital to a solution that works. This data is provisional, as this is an ongoing epidemic. Significant revelations could be made to predict future overdose trends, which could save lives in the future. Among severe health crises in our country, overdose deaths are often overlooked by the general public. It is also important to note that not every death is linked to a specific drug, and the CDC lays out potential inaccuracies within the linked web page. We plan to account for any nuances - perhaps such as “multiple causes of death” - among the data in order to formulate a concise and accurate report. When our project is finished, it will paint a precise, maybe even frightening, picture of the United States. However, we believe it is vital to promote good health within the public.
+|5.0 Expected Implications| The expected or possible implications this research could have for technologists, designers, and policymakers is that the information garnered by the collectivity of these studies may help policymakers make informed decisions on whether or not to take legal action on drug abuse, and how they may go about that process if they decide to. Research programs such as the Stakeholder’s Substance Use Research and Treatment Information Exchange (SSURTIE) develops infrastructure to help promote those who have connections to substance abuse disorder treatment, including those that administer it. This program also engages directly with policymakers, clinicians, and researchers. Research on substance abuse could encourage the development of more programs with the purpose of designing solutions to drug overdose. It will also help lead designers and technologists within those programs or corporations to create innovations that may help to ameliorate the ongoing issue of drug abuse and overdose. The purpose of research is to help inform and coax understanding in order to make informed solutions.
+|6.0 Limitations| Limitations we could encounter during our project may be a lack of data files pertaining to our topic that meets the 200/50-100K observations requirement. Another way that our project’s potential may be inhibited is the level of classification and access to research, files, and studies surrounding this topic. Drug abuse, although a prevalent topic within the U.S. is equally just as broad. There is a wide variety of drugs, including legal medications, with studies being conducted on its various symptoms and side effects. It may be difficult and time-consuming to filter through the multitude of information on drugs. In researching this topic, there are also several different factors we would have to take into account, such as the categorization of drugs, the demographics they are affecting, drug laws and regulations, and each state’s differing stance on the legalization of drugs. We would need to be much more specific within our research to be able to understand the gravity of this topic.
+|Acknowledgments| I would like to thank our teaching assistant, Shawon Sarkar, for answering all our questions concerning the project, and guiding us in the right direction.
+|References| Centers for Disease Control and Prevention. (2021, March 10). Opioid data analysis and resources. Centers for Disease Control and Prevention. Retrieved February 18, 2022, from https://www.cdc.gov/opioids/data/analysis-resources.html <br /> <br /> Stakeholders' substance use research and Treatment Information Exchange (SSURTIE). PCORI. (2019, November 12). Retrieved February 5, 2022, from https://www.pcori.org/research-results/2014/stakeholders-substance-use-research-and-treatment-information-exchange-ssurtie  <br /> <br /> Ciccarone, Daniel The rise of illicit fentanyls, stimulants and the fourth wave of the opioid overdose crisis, Current Opinion in Psychiatry: July 2021 - Volume 34 - Issue 4 - p 344-350 doi: 10.1097/YCO.0000000000000717 https://journals.lww.com/co-psychiatry/Fulltext/2021/07000/The_rise_of_illicit_fentanyls,_stimulants__the.4.aspx
+
+| Summary|
+|::::::::|
+|Our summary information function was a list that stored different observations and variables from our dataset, VSRR Provisional Drug Overdose Death Counts, extracted from the cdc.gov website. We were able to gather and organize information concerning drug overdoses into lists which includes the states, months, drug types, years, and the overdose total. Our dataset recorded drug overdose cases for each month and state from the year 2015 to 2021. <br /> We noticed through our data, that drug overdose deaths nationwide usually increase each year, especially from 2020 to 2021. In January 2015, the drug overdose deaths were 47,523. However, in January 2021, drug overdose cases exponentially increased to 94,670 deaths. We also noted that on average, there were 12 different kinds of drugs in total that were associated with drug overdoses nationwide including cocaine, opioids, meth, etc. Examining our data, we were also able to discover U.S. states that are the most affected by drug overdose: California, Florida, Ohio, and Pennsylvania. This information is also compiled in our table. Another critical piece of information we examined was that in September 2021, there were approximately 47,042 overdose cases. This accounts for almost half of overdose cases in 2021. By examining our data, we can began to learn and understand just what factors incite drug overdose and who is being the most affected by it.
+
+|Table Observations|
+|:|
+|Pertinent observations discerned from our table, Overdose Deaths in the Most Affected States, is information regarding overdose deaths in the top four most affected states as well as a comparison of them to the nationwide overdose amount. The most affected states are California, Florida, Ohio and Pennsylvania. These observations were compiled throughout the years from 2015 to 2021. In 2015 the nationwide number of overdose deaths were 47,523; in 2016, it was 52,902; in 2017, it was 65,571; in 2018, it was 70,122; in 2019, it was 67,697; in 2020, it was 72,124; in 2021, it was 94,670 deaths. This shows a jarring increase of overdose deaths from 2020 to 2021, although it is also worth noting the peculiar drop in overdose cases in 2019. Another important piece of information we noticed was that California consistently has the most overdose deaths each year, usually being only a few thousand more cases than Florida. One last observation we found was that overdose deaths within each of the four aforementioned states increased consistently throughout the years, expect for 2017.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## What is this file for?
-
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
-* Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
 ```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and
-# then "source" an R file (data_access.R)
 source("info_201_p02_cameron_table_suminfo.R")
 data_access_test()
 summary_info
 the_table
 ```
 
-### Example 2: Initialize a variable and then use it
+|Chart Name| Brief Description|
+|:|:|
+|Overdose Deaths by Drug Type | This chart was intended to show the relationship between various types of drugs and drug overdose deaths. There are four different kinds of drugs utilized within this chart: opioids, cocaine, heroin, and psychostimulants. A pertinent observation found in this chart is that opioids has the highest percentage of 54% compared to the other drugs. The other drugs were listed at much lower percentages: cocaine at 15%, heroin at 16%, and psychostimulants at 14%. This entails that opioids may have a higher correlation with drug overdose than other drugs do.
+
 ```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
+source("OD_Pie_Chart.R")
+data_access_test()
 ```
+|Chart Name| Brief Description|
+|:|:|
+|Annual National Deaths per Year| This chart was intended to show the progression of drug overdose deaths throughout the years. Examining the chart, we can observe a steady increase of drug overdose deaths from the year 2016 to 2020 which are represented by a line. The national overdose deaths on the y-axis of the chart range from 50,000 to 90,000. In 2016, we see the number of deaths at a bit below 55,000. In 2018, this number increases to about 70,000. In 2020, this number increases a bit past 70,000.
 
-> `r msg` Hope you have a good day!!
-
-## ABOUT THIS FILE:
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+source("5_Chart_2.R")
+data_access_test()
 ```
+|Chart Name| Brief Description|
+|:|:|
+|Overdose Deaths by State for 2021| This chart was intended to show the relationship between states within the U.S. and drug overdose deaths. The bar chart gives us a visual representation of the amount of drug overdose cases per state, and allows us to compare them easily. Pertinent observations that can be made about this bar chart is that California has an excessively high number of drug overdose deaths compared to other states. Other states with high numbers of deaths would be Pennsylvania, Ohio, and Pennsylvania. Another thing to take notice of, is how minimal drug overdose deaths are in states like Wyoming, South Dakota and Alaska. This information may help us understand why drug overdose happens by analyzing the demographics and environments within these locations.
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+source("6_Chart_3.R")
+data_access_test()
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
