@@ -3,7 +3,8 @@ library("ggplot2")
 library("tidyverse")
 library("zoo")
 getwd()
-source("info_201_p02_cameron_table_suminfo.R")
+source("suminfo.R")
+source("table.R")
 
 df_for_opiates <- drug_data %>%
   filter(Month == "January") %>%
@@ -37,8 +38,10 @@ lbls <- c("Opioids", "Psychostimulants", "Heroin", "Cocaine")
 pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) 
 lbls <- paste(lbls,"%",sep="") 
-pie(slices,labels = lbls, col=rainbow(length(lbls)),
+pie1 <- pie(slices,labels = lbls, col=rainbow(length(lbls)),
     main="Overdose Deaths by Drug Type")
+pie1
+
 
 
 

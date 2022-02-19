@@ -38,8 +38,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-source("info_201_p02_cameron_table_suminfo.R")
-data_access_test()
+source("suminfo.R")
+source("table.R")
 summary_info
 the_table
 ```
@@ -50,7 +50,6 @@ the_table
 
 ```{r}
 source("OD_Pie_Chart.R")
-data_access_test()
 ```
 |Chart Name| Brief Description|
 |:|:|
@@ -58,7 +57,7 @@ data_access_test()
 
 ```{r}
 source("5_Chart_2.R")
-data_access_test()
+chart2
 ```
 |Chart Name| Brief Description|
 |:|:|
@@ -66,5 +65,5 @@ data_access_test()
 
 ```{r}
 source("6_Chart_3.R")
-data_access_test()
+chart3
 ```
