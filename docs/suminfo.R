@@ -5,7 +5,6 @@ library(zoo)
 library(gtsummary)
 
 drug_data <- read.csv(file = "https://data.cdc.gov/api/views/xkb8-kh2a/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
-View(drug_data)
 drug_data <- data.frame(drug_data)
 drug_data$Date <- paste(drug_data$Month, drug_data$Year)
 drug_data$Date <- as.yearmon(drug_data$Date, '%B %Y')
