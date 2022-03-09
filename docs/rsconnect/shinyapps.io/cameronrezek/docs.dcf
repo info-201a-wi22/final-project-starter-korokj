@@ -1,0 +1,11 @@
+name: docs
+title:
+username:
+account: cameronrezek
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5812270
+bundleId: 5659846
+url: https://cameronrezek.shinyapps.io/docs/
+when: 1646808328.22326
+lastSyncTime: 1646808328.22326
