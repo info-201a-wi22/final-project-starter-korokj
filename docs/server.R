@@ -23,5 +23,25 @@ server <- function(input, output) {
     
   })
   
+  
+  source("suminfo.R")
+  
+  filtered_df2 <- drug_data %>%
+    filter(Indicator == 'Number of Drug Overdose Deaths') %>%
+    filter(Month == 'January') %>%
+    filter(State.Name != 'United States')
+    
+  reactive_df2 <- reactive({
+    filtered_df2 %>%
+      filter(Year == input$date_from[1])
+  })
+  
+  output$chart <- renderPlotly({
+    
+    plot_ly(reactive_df2(), x = ~State.Name, y =~Data.Value, type = 'bar', name = '# of overdose deaths') %>% layout(title = 'Overdose Deaths by State', xaxis = list(title = 'State'), yaxis = list(title = '# of overdose deaths'))
+          
+          })
+}
+    
 
-} # server
+ # server
