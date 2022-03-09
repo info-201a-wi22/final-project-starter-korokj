@@ -5,7 +5,7 @@ library("dplyr")
 library("ggplot2")
 library("plotly")
 
-
+drug_data <- read.csv("https://data.cdc.gov/api/views/xkb8-kh2a/rows.csv?accessType=DOWNLOAD&bom=true&format=true")
 
 # filter drug data by number of drug overdose deaths, 2021, include each state except the entire United States
 # Stacked Bar Chart 
